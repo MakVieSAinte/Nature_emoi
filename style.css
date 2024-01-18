@@ -1,0 +1,482 @@
+/*|#MakVie-SAinte|*/
+
+*,::before,::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   scroll-behavior: smooth;
+}
+ 
+body { 
+   background-color: #ffffff;
+   color: #333;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   scroll-behavior: smooth;
+}
+
+a, i{
+   transition: 0.33s;
+}
+
+a:hover,
+.txt-sroll:hover a,
+.txt-sroll:hover i {
+   color: #ADD981;
+}
+
+header {
+   height: 100vh;
+   background-image: url('images/bg.jpg');
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+nav {
+   display: flex;
+   align-items: center;
+   justify-content: left;
+   flex-wrap: wrap;
+   padding: 20px 40px;
+}
+
+nav ul a {
+   text-decoration: none;
+   color: #fff;
+   font-size: 20px;
+   padding: 1px 15px;
+}
+
+nav img {
+   width: 120px;
+}
+
+.bloc-presentation {
+   width: 100%;
+   margin-top: 90px;
+}
+
+.bloc-presentation h1 {
+   color: #fff;
+   font-size: 90px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   padding-left: 60px;
+}
+.bloc-presentation p {
+   color: #fff;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   padding-left: 60px;
+}
+
+.txt-sroll a {
+   color: #fff;
+   text-decoration: none;
+   padding-bottom: 10px;
+}
+
+.txt-sroll {
+   position: absolute;
+   bottom: 40px;
+   left: 40px;
+   color: #fff;
+   transition: 0.33s;
+   cursor: pointer;
+}
+
+.txt-dev {
+   position: absolute;
+   bottom: 40px;
+   right: 40px;
+   color: #fff;
+}
+
+/* Responsive Header */
+
+@media screen and (max-width: 860px) {
+   .bloc-presentation h1,.bloc-presentation p {padding-left: 30px;}
+}
+
+@media screen and (max-width: 780px) {
+
+   nav ul a {font-size: 17px; padding: 0 5px;}
+
+   .bloc-presentation h1 {font-size: 70px; padding-left: 20px;}
+   .bloc-presentation p {padding-left: 20px;}
+
+}
+
+@media screen and (max-width: 715px) {
+
+   nav {padding: 17px 7px;}
+
+   nav ul a {font-size: 13px; padding: 0 1px;}
+
+   .bloc-presentation {margin-top: 25px;}
+
+   .bloc-presentation h1 {font-size: 50px; line-height: 1.2;}
+
+   header span {font-size: 13px;}
+
+   .txt-dev {bottom: 20px; right: 10px;}
+
+   .txt-sroll {bottom: 20px; right: 10px;}
+}
+
+/* //Responsive Header */
+
+/* Feature */
+
+.feature {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+.bloc-feature {
+   width: 150px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   margin: 60px 4px 0px 4px;
+}
+
+.bloc-feature i {
+   font-size: 40px;
+   color: #76dd0e;
+   margin-bottom: 10px;
+}
+
+.bloc-feature i:hover {
+   transform: scale(0.90);
+}
+
+.bloc-feature p {
+   font-size: medium;
+   color: #333;
+   font-weight: 600;
+}
+/* Responsive Feature */
+
+@media screen and (max-width: 522px) {
+   .bloc-feature i {font-size: 30px;}
+   .bloc-feature p {font-size: 12px;}
+}
+
+/* // Responsive Feature */
+
+/* Les Titres */
+
+h1.titre {
+   font-size: 42px;
+   font-family: Georgia;
+   position: relative;
+   padding: 7px 270px;
+   margin: 120px 0px 45px 0px;
+}
+
+h1.titre::before {
+   content: "";
+   position: absolute;
+   bottom: -2px;
+   width: 44px;
+   height: 6px;
+   background-color: #ADD981;
+}
+
+/* Responsive des titres */
+
+@media screen and (max-width: 1390px) {
+
+   h1.titre {font-size: 35px; padding: 10px 60px;}
+}
+
+@media screen and (max-width: 780px) {
+
+   h1.titre {font-size: 35px; padding: 10px 45px;}
+}
+
+@media screen and (max-width: 715px) {
+
+   h1.titre {font-size: 30px;}
+}
+
+@media screen and (max-width: 522px) {
+   
+   h1.titre {padding: 8px 27px;}
+}
+
+/* // Responsive des titres */
+
+/* Nos meilleurs ventes */
+
+.grid-vente {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(1, 400px);
+   width: 1000px;
+   margin: 0 auto;
+}
+
+.items-vente {
+   margin: 8px;
+   position: relative;
+}
+
+/* globals */
+
+.items img,
+.items-vente img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/* Responsive meilleures ventes */
+
+@media screen and (max-width: 1030px) {
+
+   .grid-vente {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 350px);
+      width: 90%;
+   }
+
+   .grid-vente :nth-child(1) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+   }
+   
+   .grid-vente :nth-child(2) {
+      grid-column: 2/3;
+      grid-row: 1/2;
+   }
+   .grid-vente :nth-child(3) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+   }
+   
+   .grid-vente :nth-child(4) {
+      grid-column: 2/3;
+      grid-row: 2/3;height: auto;
+   }
+}
+
+@media screen and (max-width: 630px) {
+
+   .grid-vente {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 390px);
+      width: 90%;
+   }
+
+   .grid-vente :nth-child(1) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+   }
+   .grid-vente :nth-child(2) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+   }
+   .grid-vente :nth-child(3) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+   }
+   .grid-vente :nth-child(4) {
+      grid-column: 1/2;
+      grid-row: 4/5;
+   }
+}
+
+/* // Responsive  bloc meilleures ventes */
+
+/* bando */
+
+.bando {
+   position: absolute;
+   bottom: 0;
+   background-color: #FFFFFFDF;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   padding: 15px 0px;
+}
+
+.bando .un p {
+   font-size: 22px;
+   font-weight: bold;
+   margin-bottom: 3px;
+}
+
+.bando .un span {
+   font-size: 15px;
+   font-weight: 800;
+   color: #ADD981;
+}
+
+.bando .deux button {
+   border: 2px;
+   padding: 12px 15px;
+   border-radius: 30px;
+   background-color: #ADD981;
+   color: #fff;
+   font-size: small;
+   font-weight: 600;
+   cursor: pointer;
+   transition: 0.33s;
+}
+
+.bando .deux button:hover {
+   transform: scale(0.97);
+   background-color: #63bb0b;
+}
+
+/* Nos Plantes */
+
+.grid {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(4, 280px);
+   width: 1000px;
+   margin: 0px auto;
+}
+
+.items {
+   margin: 8px;
+   position: relative;
+}
+
+.grid :nth-child(1) {
+   grid-column: 1/3;
+   grid-row: 1/3;
+}
+.grid :nth-child(2) {
+   grid-column: 3/5;
+}
+.grid :nth-child(3) {
+   grid-column: 3/5;
+}
+.grid :nth-child(4) {
+   grid-column: 1/2;
+   height: 500px;
+}
+.grid :nth-child(5) {
+   grid-column: 2/4;
+   height: 500px;
+}
+.grid :nth-child(6) {
+   grid-column: 4/5;
+   height: 500px;
+}
+
+/* // Responsive partie plante */
+
+@media screen and (max-width: 1030px) {
+
+   .grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(7, 280px);
+      width: 60%;
+   }
+
+   .grid :nth-child(1) {
+      grid-column: 1/3;
+   }
+   .grid :nth-child(2) {
+      grid-column: 1/3;
+      grid-row: 3/4;
+   }
+   .grid :nth-child(3) {
+      grid-column: 1/3;
+      grid-row: 4/5;
+   }
+   .grid :nth-child(4) {
+      grid-column: 1/3;
+      grid-row: 5/6;
+   }
+   .grid :nth-child(5) {
+      grid-column: 1/3;
+      grid-row: 7/8;
+      height: auto;
+   }
+   .grid :nth-child(6) {
+      grid-column: 1/3;
+      grid-row: 8/9;
+   }
+}
+@media screen and (max-width: 900px) {
+
+   .grid {
+      width: 70%;
+   }
+}
+
+@media screen and (max-width: 630px) {
+
+   .grid {
+      grid-template-rows: repeat(7, 280px);
+      width: 90%;
+   }
+}
+
+@media screen and (max-width: 500px) {
+
+   .grid {
+      width: 100%;
+   }
+}
+
+/* // Responsive partie plante */
+
+main img.img-grand {
+   width: 100%;
+   max-height: 380px;
+   object-fit: cover;
+}
+
+/* Footer */
+
+footer {
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   padding: 120px 0px 70px;
+}
+
+footer p {
+   color: #4b4a4a;
+   font-size: 16px;
+   font-weight: 600;
+}
+
+footer a {
+   color: #4b4a4a;
+   text-decoration: none;
+}
+
+/* Responsive footer */
+
+@media screen and (max-width: 500px) {
+
+   footer p {
+      font-size: small;
+   }
+}
+
+@media screen and (max-width: 345px) {
+
+   footer {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+   }
+
+   footer p {
+      padding: 0 0 6px;
+   } 
+}
+
+/* // Responsive footer */
+
+/* 925DEV */
